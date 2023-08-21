@@ -110,10 +110,13 @@ dados
 
 hist(dados)
 
+#Carregando o pacote ggplot2
+require(ggplot2)
 library(ggplot2)
 # dataset:
-data=data.frame(value)
+data=data.frame(value=rnorm(100))
 
 # basic histogram
-p <- ggplot(data, aes)
+p <- ggplot(data, aes(x=value)) +
   geom_histogram()
+p
